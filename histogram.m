@@ -34,4 +34,5 @@ for k=1:size(binary,1)
     disp(counter);
     a(k,1) = counter;
 end
-
+%Plotting the histogram
+figure, plot(a);
