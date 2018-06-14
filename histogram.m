@@ -22,5 +22,16 @@ for i=1:size(grayscale,1)
     end
 end
 binary=single(binary);
-%Displaying the image in UI
-figure, imshow(binary);
+%Finding false pixel frequency for each row
+a = zeros(size(binary,1),1);
+for k=1:size(binary,1)
+    counter=0;
+    for l=1:size(binary,2)
+        if(binary(k,l))==0
+            counter=counter+1;
+        end
+    end
+    disp(counter);
+    a(k,1) = counter;
+end
+
